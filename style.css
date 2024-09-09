@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    font-size: 62.5%;
+    
+
+    /* COLORS */
+    --bg-input:#06181C;
+    --bg-allWindown:#000;
+    --bg-button:#065E7C;
+    --color-text:#E1E1E6;
+    --bg-table:#092D38;
+    --text-placeholder:#7C7C8A;
+    --bg-buttonHover:#1a3741;
+    --bg-tablenew:#0d4455;
+    --bg-buttonRemove:#F75A68;
+    --bg-buttonTdHover:#8d3940;
+    --color-zero-favorites: hsl(189, 4%, 32%);
+}
+
+body  {
+    font-size: 1.6rem;
+    background:var(--bg-allWindown) ;
+}
+
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 0;
+
+}
+
+input {
+    border: none;
+    display: flex;
+    padding: 1.6rem;
+    align-items: center;
+    border-radius: .5rem;
+    width: 46.2rem;
+    height: 4.8rem;
+    background: var(--bg-input);
+    color: var(--color-text)
+    
+}
+
+::placeholder {
+    color: var(--text-placeholder);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; 
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+header button {
+    display: flex;
+    padding: 1.2rem 3.2rem;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    border-radius: .5rem;
+    color: var(--color-text);
+    background-color: var(--bg-button);
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.4rem; 
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color:var(--bg-buttonHover) ;
+}
+
+#app {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    
+}
+
+table * {
+    font-size: 1.6rem;
+    color:var(--color-text)
+    
+}
+
+table th {
+    background-color: var(--bg-table);
+    padding: 1.6rem 2.4rem 1.6rem 4.0rem;
+    font-size: 2.0rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+table th:first-child {
+    border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+    border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(odd) {
+    background: var(--bg-tablenew);
+}
+
+table tr:nth-child(even) {
+    background: var(--bg-table);
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+table td {
+    padding: 1.6rem 2.4rem 1.6rem 4.0rem;
+    text-align: left;
+}
+
+table td .remove {
+    border: none;
+    background: none;
+    color: var(--bg-buttonRemove);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user p {
+    font-weight: bold;
+}
+
+.boxEmpty {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 6rem;
+  }
+  
+  .boxEmpty .empty-content {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+  
+  .empty-content p {
+    font-size: 4.0rem;
+    font-weight: bold;
+    color: var(--color-zero-favorites);
+  }
+  
+  .hide {
+    display: none;
+    transition: display .2s ease;
+  }
